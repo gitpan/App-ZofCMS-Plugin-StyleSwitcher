@@ -1,0 +1,11 @@
+    plugins => [ qw/StyleSwitcher/ ],
+    plug_style_switcher => {
+        dsn                     => "DBI:mysql:database=test;host=localhost",
+        user                    => 'test',
+        pass                    => 'test',
+        opt                     => { RaiseError => 1, AutoCommit => 1 },
+        styles => {
+            main => 'main.css',
+            alt  => [ 'alt.css', '[IE]alt_ie.css' ],
+        },
+    },
