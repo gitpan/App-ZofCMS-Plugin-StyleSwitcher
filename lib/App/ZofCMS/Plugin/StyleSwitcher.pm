@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::StyleSwitcher;
 use warnings;
 use strict;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 
 use base 'App::ZofCMS::Plugin::Base';
 use DBI;
@@ -248,8 +248,22 @@ You need to include the plugin in the list of plugins to execute.
         },
     },
 
+    plug_style_switcher => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            dsn                     => "DBI:mysql:database=test;host=localhost",
+            user                    => 'test',
+            pass                    => 'test',
+        }
+    },
+
 The plugin reads it's configuration from L<plug_style_switcher> first-level ZofCMS Template
-or Main Config file template. Keys that are set in ZofCMS Template will override same
+or Main Config file template. Takes a hashref or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_style_switcher>
+as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object. Keys that are set in ZofCMS Template will override same
 ones that are set in Main Config file. Considering that you'd want the CSS style settings
 to be set on an entire site, it only makes sense to set this plugin up in your Main Config
 file.
