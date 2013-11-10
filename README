@@ -1,11 +1,12 @@
 App-ZofCMS-Plugin-StyleSwitcher
 
-The module provides means to have what is known as "Style Switcher" thingie on your webpages.
-In other words, having several CSS stylesheets per website.
+The module provides means to have what is known as "Style Switcher"
+thingie on your webpages. In other words, having several
+CSS stylesheets per website.
 
-The L<http://alistapart.com/stories/alternate/> describes the concept in more detail. It
-also provides JavaScript based realization of the idea; this plugin does not rely on
-javascript at all.
+The L<http://alistapart.com/stories/alternate/> describes the concept
+in more detail. It also provides JavaScript based realization of the
+idea; this plugin does not rely on javascript at all.
 
 INSTALLATION
 

@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::StyleSwitcher;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 
 use base 'App::ZofCMS::Plugin::Base';
 use DBI;
@@ -178,6 +178,8 @@ sub dbh {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 

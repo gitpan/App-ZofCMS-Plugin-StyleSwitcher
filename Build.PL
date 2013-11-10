@@ -14,7 +14,9 @@ my $builder = Module::Build->new(
         'App::ZofCMS'               => 0.0106,
         'App::ZofCMS::Plugin::Base' => 0.0102,
         'DBI'                       => 1.602,
+        'perl' => '5.006',
     },
+    configure_requires => { 'Module::Build' => 0 },
     add_to_cleanup      => [ 'App-ZofCMS-Plugin-StyleSwitcher-*' ],
     create_makefile_pl => 'traditional',
 );
